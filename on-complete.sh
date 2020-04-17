@@ -32,4 +32,4 @@ echo "$(($(cat numUpload)+1))" > numUpload # Plus 1
 
 #echo "$(($(cat numUpload)-1))" > numUpload # Minus 1
 
-rclone serve http $PWD/ --addr $(curl ip.sb):8080 -vv
+rclone serve http $PWD/ --addr :8080 -vv
