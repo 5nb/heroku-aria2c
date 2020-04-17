@@ -14,8 +14,12 @@ if [ $2 -eq 0 ]; then
     exit 0
 elif [ -e "${filepath}.aria2" ]; then
     rm -vf "${filepath}.aria2"
+elif [ -e "${filepath}.torrent" ]; then
+    rm -vf "${filepath}.torrent"
 elif [ -e "${topPath}.aria2" ]; then
     rm -vf "${topPath}.aria2"
+elif [ -e "${topPath}.torrent" ]; then
+    rm -vf "${topPath}.torrent"
 fi
 echo -e "$(date +"%m/%d %H:%M:%S") ${INFO} Delete .aria2 file finish"
 echo "$(($(cat numUpload)+1))" > numUpload # Plus 1
