@@ -17,6 +17,7 @@ elif [ -e "${filepath}.aria2" ]; then
 elif [ -e "${topPath}.aria2" ]; then
     rm -vf "${topPath}.aria2"
 fi
+
 echo -e "$(date +"%m/%d %H:%M:%S") ${INFO} Delete .aria2 file finish"
 echo "$(($(cat numUpload)+1))" > numUpload # Plus 1
 
